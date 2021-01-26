@@ -1,0 +1,50 @@
+using System;
+
+namespace _EigenesProjekt_AE_GerhardtWolfram
+{
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            //Erklärung: Mehrere Variablen des gleichen Typen können durch ein Komma getrennt deklariert werden.
+            int geld, test, test2, test3, test4, test5, euro50, euro20, euro10, euro5, euro2, euro1;
+
+            //Start des Programmes mit der Anweisung zur eingabe eines Betrages ohne Komma.
+            //Zuweisung der Variablen "geld"
+            //Umwandlung des Integer von 8-bit in 32-bit - Eingabe Erkennung
+            Console.WriteLine("Betrag eingeben: ");
+            Console.WriteLine("Keine Kommastellen !");
+            geld = Convert.ToInt32(Console.ReadLine());
+
+            //Ausgabe Text
+            Console.WriteLine("Die Gerhardt & Wolfram OffshoreIsBestShore4Money Bank bedankt sich bei Ihnen, sie erhalten: ");
+            Console.WriteLine("(psst ... Woher der Schotter kommt ... wir stellen keine Fragen.)");
+
+            //Berechnung der Maximalen Auszahlung des jeweiligen Wertes und übergabe des Rest zum nächst geringeren Wert
+            euro50 = geld / 50;
+            test = geld - (euro50 * 50);
+            Console.WriteLine("Anzahl der 50,00 € Euro Scheine: " + euro50);
+
+            euro20 = test / 20;
+            test2 = test - (euro20 * 20);
+            Console.WriteLine("Anzahl der 20,00 € Euro Scheine: " + euro20);
+
+            euro10 = test2 / 10;
+            test3 = test2 - (euro10 * 10);
+            Console.WriteLine("Anzahl der 10,00 € Euro Scheine: " + euro10);
+
+            euro5 = test3 / 5;
+            test4 = test3 - (euro5 * 5);
+            Console.WriteLine("Anzahl der 5,00 € Euro Münzen: " + euro5);
+
+            euro2 = test4 / 2;
+            test5 = test4 - (euro2 * 2);
+            Console.WriteLine("Anzahl der 2,00 € Euro Münzen: " + euro2);
+
+            euro1 = test5 / 1;
+            Console.WriteLine("Anzahl der 1,00 € Euro Münzen: " + euro1);
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -35,7 +35,7 @@ namespace _EigenesProjekt_AE_GerhardtWolfram
 
             euro5 = test3 / 5;
             test4 = test3 - (euro5 * 5);
-            Console.WriteLine("Anzahl der 5,00 € Euro Münzen: " + euro5);
+            Console.WriteLine("Anzahl der 5,00 € Euro Scheine: " + euro5);
 
             euro2 = test4 / 2;
             test5 = test4 - (euro2 * 2);
